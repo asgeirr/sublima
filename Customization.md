@@ -15,7 +15,6 @@ In principle there are two things that needs to be done before you man configure
 The first related to the properties of sublima as a search system, the second to presentation layer and design of the portal.
 
 
-
 ### 2.1 Edit Sublima configuration file to enable customized search 
 
 The configuration file for Sublima search engine is located here
