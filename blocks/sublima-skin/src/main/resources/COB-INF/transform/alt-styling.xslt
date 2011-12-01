@@ -801,13 +801,10 @@ PVJ: Made the file UTF-8
 		<div id="rightFooter">
 			<p>
 				<i18n:text key="sublima.footer">
-					An Open Source Software Project supported by
-					<a href="http://www.abm-utvikling.no/">ABM Utvikling</a>
-					and
-					<a href="http://www.computas.com/">Computas AS</a>
-					, 2008
+					Sublima er et fri programvare-prosjekt støttet av <a href="http://www.abm-utvikling.no/">ABM utvikling</a>
+					og <a href="http://www.computas.com/">Computas AS</a>
 				</i18n:text>
-				(Sublima 1.1.2)
+				(Sublima 1.1.3)
 			</p>
 		</div>
 		<div class="clearer">&#160;</div>
