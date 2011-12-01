@@ -83,8 +83,7 @@
     <div id="header">
 			<div id="headerLogo">
 				<a  href="{$baseurl}/{$qloc}">
-				<img alt="header logo" class="headerImg" src="{$baseurl}/images/sublima-logo.png"/>
-				<span id="headerText">Emneportalverktøy</span>
+				<img alt="header logo" class="headerImg" src="{$baseurl}/images/detektorportal-logo.png"/>
 				</a>
 			</div>
 			<div id="topMenu">
