@@ -18,7 +18,7 @@
     <head>
       <title>
 	<xsl:value-of select="$title"/>
-	<xsl:text> | SMIL</xsl:text>
+	<xsl:text> | Detektor emneportal</xsl:text>
       </title>
    
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
