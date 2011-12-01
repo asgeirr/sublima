@@ -794,9 +794,9 @@ PVJ: Made the file UTF-8
 
 	<div id="footer">
 		<div id="leftFooter">
-			<p>
-				Sublima kontaktinfomasjon, Adresse, telfonnummer, faks, mail adresse etc...
-			</p>
+			<p><i18n:text key="deichman.footer">
+			Detektor emneportal er en tjeneste fra <a href="http://www.deichman.no/">Deichmanske bibliotek</a>
+			</i18n:text></p>
 		</div>
 		<div id="rightFooter">
 			<p>
