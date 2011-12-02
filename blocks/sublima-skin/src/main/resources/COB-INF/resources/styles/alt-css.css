@@ -60,6 +60,11 @@ fieldset {
   background-color: #cc3a0a; /*Background color header */
   backgound-image: url(header_topic.png) ; /*header background image*/
   height: 120px;
+}#header {
+  width: 100%;
+  background-color: #cc3a0a; /*Background color header */
+  background-image: url(header_topic.png); /*header background image*/
+  height: 120px;
 }
 #headerLogo {
   float:left;
