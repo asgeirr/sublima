@@ -105,8 +105,38 @@
                 </div>
             </xsl:if>
 
+            <xsl:if test="sub:Resource/dct:coverage">
+                <div class="facet">
+                    <div class="facetHeading">
+                        <h3>
+                            <i18n:text key="country">Land</i18n:text>
+                        </h3>
+                        <img id="openCloseLanguage" alt="open/close publisher" src="{$baseurl}/images/closefacet.png"
+                             onclick="OpenCloseFact('languageFacets', this);"/>
+                        <div class="clearer">&#160;</div>
+                    </div>
+                    <div id="coverageFacets">
+                        <ul>
+                            <xsl:apply-templates select="sub:Resource/dct:coverage" mode="facets">
+                                <xsl:with-param name="baseurlparams" select="$baseurlparams"/>
+                                <xsl:sort lang="{$interface-language}"
+                                          select="go:Country/rdfs:label[@xml:lang=$interface-language]"/>
+                            </xsl:apply-templates>
+                        </ul>
+                        <div id="coverageFacetHideShow" class="showHideFacetslinks">
+                            <a id="coverageFacetShowLink" href="javascript:showfacets('languageFacet');">
+                                <i18n:text key="more">mer</i18n:text>
+                            </a>
+                            <a id="languageFacetHideLink" href="javascript:hidefacets('languageFacet');">
+                                <i18n:text key="hide">skjul</i18n:text>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </xsl:if>
 
-            <xsl:if test="sub:Resource/dct:audience">
+
+            <!--xsl:if test="sub:Resource/dct:audience">
                 <div class="facet">
                     <div class="facetHeading">
                         <h3>
@@ -134,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-            </xsl:if>
+            </xsl:if-->
 
             <xsl:if test="sub:Resource/dct:type">
                 <div class="facet">
