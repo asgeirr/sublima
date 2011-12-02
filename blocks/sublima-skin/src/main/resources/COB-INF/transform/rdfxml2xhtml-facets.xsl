@@ -124,10 +124,10 @@
                             </xsl:apply-templates>
                         </ul>
                         <div id="coverageFacetHideShow" class="showHideFacetslinks">
-                            <a id="coverageFacetShowLink" href="javascript:showfacets('languageFacet');">
+                            <a id="coverageFacetShowLink" href="javascript:showfacets('coverageFacet');">
                                 <i18n:text key="more">mer</i18n:text>
                             </a>
-                            <a id="languageFacetHideLink" href="javascript:hidefacets('languageFacet');">
+                            <a id="coverageFacetHideLink" href="javascript:hidefacets('coverageFacet');">
                                 <i18n:text key="hide">skjul</i18n:text>
                             </a>
                         </div>
