@@ -7,7 +7,7 @@ body {
   background: #fff;
   min-width:  1200px; 
   font-size:  12px;
-  font-family: Verdana;
+  font-family: Arial;
 }
 form {
   padding: 0;
@@ -15,11 +15,11 @@ form {
 }
 
 a {
-  color: #0072bc;
+  color: #225E80;
 }
 
 a:hover {
-  color: #0072bc;
+  color: #CC0033;
   text-decoration: none;
 }
 
@@ -57,7 +57,8 @@ fieldset {
 /* Header styles */
 #header {
   width: 100%;
-  background-color: #89c0d7; /*Background color header */
+  background-color: #cc3a0a; /*Background color header */
+  backgound-image: url(header_topic.png) ; /*header background image*/
   height: 120px;
 }
 #headerLogo {
@@ -87,7 +88,7 @@ fieldset {
   width: 100%;
 }
 .MenuItem {
-  background-color: #409ebd; /*background color for the menu items */
+  background-color: #339999; /*background color for the menu items */
   text-align: center;
   height:30px;
   float:left;
@@ -110,15 +111,18 @@ fieldset {
 }
 #textSizeLarge {
   font-size:  16px;
+   font-weight: bold;
   padding: 5px;
 }
 #textSizeMedium {
    font-size:  14px;
+   font-weight: bold;
    padding: 5px;
 }
 #textSizeSmall {
   font-size:  12px;
-  background-color: #c8dce6; /*backgund color selectet text size, also change color in textsize.js*/
+  background-color: #f3e3c4; /*backgund color selectet text size, also change color in textsize.js*/
+   font-weight: bold;
   padding: 5px;
 }
 .langBar {
@@ -160,7 +164,7 @@ fieldset {
   background-image: url(lefttop.png); /*background image curved corner right*/
   background-position: right;
   background-repeat:no-repeat;
-  background-color:#d3dfe5; /*background color left col */
+  background-color:#ADD6D6; /*background color left col */
 }
 #contentMiddleHeader {
   height: 100%;
@@ -175,7 +179,7 @@ fieldset {
   background-image: url(righttop.png); /*background image curved corner right*/
   background-position: left;
   background-repeat:no-repeat;
-  background-color:#c0d2db;  /*background color right col */
+  background-color:#CCE5E5;  /*background color right col */
 }
 #panel-az {
   padding: 5px 40px 0 40px;
@@ -183,13 +187,21 @@ fieldset {
 #panel-az a {
   margin-left: 5px; 
 }
+#panel-az a:hover {
+  background-color : #CC0033;
+  color : #ffffff;
+}
+#panel-az a:active {
+  background-color : #ffffff;
+  color : #CC0033;
+}
 /*content*/
 #content {
   width:100%;
-  background-color:#c0d2db; /*Background color right col*/
+  background-color:#CCE5E5; /*Background color right col*/
 }
 #colmidleft {
-  background-color: #d3dfe5; /*Background color left col*/
+  background-color: #ADD6D6; /*Background color left col*/
   width: 75%;
   float: left;
 }
@@ -246,7 +258,8 @@ fieldset {
   font-size:25px;
 }
 .facetHeading {
- background-color: #89c0d7; /*background color facets heading box */
+ background-color: #339999; /*background color facets heading box */
+ color: #ffffff;
  padding: 5px 20px 5px 40px;
  margin-top: 10px;
 }
@@ -284,7 +297,8 @@ fieldset {
 #resourceHeading {
   width: 100%;
   line-height:26px;
-  background-color:#89C0D7; /* background color resource Heading */
+  background-color:#339999; /* background color resource Heading */
+  color: #ffffff;
 }
 #numberOfHits {
   font-size:14px;
@@ -308,7 +322,7 @@ fieldset {
   padding: 0;
 }
 #panel-results {
-  background-color: #f4f8fa; /* background color results panel */
+  background-color: #F3E3C4; /* background color results panel */
   padding-top: 10px;
 }
 #panel-results dl {
@@ -316,7 +330,7 @@ fieldset {
 }
 
 #browseHeader {
-  background-color:#89C0D7; /* background color browse header */
+  background-color:#339999; /* background color browse header */
   line-height:26px;
   width:100%;
   color: #fff;
@@ -329,7 +343,7 @@ fieldset {
 }
 #panel-topic-details 
 {
-  background-color: #f4f8fa;  /* background color topics*/
+  background-color: #f3e3c4;  /* background color topics*/
   
   }
 #panel-topic-details ul {
@@ -352,20 +366,20 @@ fieldset {
 }
 #footer {
   margin-top: 10px;
-  background-color: #c8dce6; /* background color footer*/
+  background-color: #ffffff; /* background color footer*/
   height: 30px;
 }
 #leftFooter {
   width: 49%;
   float:left;
-  background-color: #89c0d7; /* background color left footer*/
+  background-color: #d14d22; /* background color left footer*/
   text-align:center;
   height:100%;
  }
 #rightFooter {
     float:right;
     width: 49%;
-    background-color: #89c0d7; /* background color right footer*/
+    background-color: #d14d22; /* background color right footer*/
     padding: 0 10px;
     text-align:center;
     height:100%;
