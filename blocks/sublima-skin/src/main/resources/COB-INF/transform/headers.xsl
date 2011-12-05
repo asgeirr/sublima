@@ -83,7 +83,8 @@
     <div id="header">
 			<div id="headerLogo">
 				<a  href="{$baseurl}/{$qloc}">
-				<img alt="header logo" class="headerImg" src="{$baseurl}/images/detektorportal-logo.png"/>
+				<img alt="header logo" class="headerImg" src="{$baseurl}/images/sublima-logo.png"/>
+				<span id="headerText">Emneportalverktøy</span>
 				</a>
 			</div>
 			<div id="topMenu">
@@ -95,9 +96,9 @@
 			</div>
 			
 			<div class="langBar">
-				<!--xsl:call-template name="set-langs">
+				<xsl:call-template name="set-langs">
 					<xsl:with-param name="baseurl" select="$baseurl"/>
-				</xsl:call-template-->
+				</xsl:call-template>
 				<div id="textSize">
 					<a id="textSizeLarge" style="cursor:pointer;" onclick="ChangeTextSize('16px', this);">A</a>
 					<a id="textSizeMedium" style="cursor:pointer;" onclick="ChangeTextSize('14px', this);">A</a>
@@ -110,4 +111,3 @@
 
 
 </xsl:stylesheet>
-
