@@ -794,17 +794,20 @@ PVJ: Made the file UTF-8
 
 	<div id="footer">
 		<div id="leftFooter">
-			<p><i18n:text key="deichman.footer">
-			Detektor emneportal er en tjeneste fra <a href="http://www.deichman.no/">Deichmanske bibliotek</a>
-			</i18n:text></p>
+			<p>
+				Sublima kontaktinfomasjon, Adresse, telfonnummer, faks, mail adresse etc...
+			</p>
 		</div>
 		<div id="rightFooter">
 			<p>
 				<i18n:text key="sublima.footer">
-					Sublima er et fri programvare-prosjekt støttet av <a href="http://www.abm-utvikling.no/">ABM utvikling</a>
-					og <a href="http://www.computas.com/">Computas AS</a>
+					An Open Source Software Project supported by
+					<a href="http://www.abm-utvikling.no/">ABM Utvikling</a>
+					and
+					<a href="http://www.computas.com/">Computas AS</a>
+					, 2008
 				</i18n:text>
-				(Sublima 1.1.3)
+				(Sublima 1.1.2)
 			</p>
 		</div>
 		<div class="clearer">&#160;</div>
