@@ -83,7 +83,11 @@
     <div id="header">
 			<div id="headerLogo">
 				<a  href="{$baseurl}/{$qloc}">
+<<<<<<< HEAD
 				<img alt="header logo" class="headerImg" src="{$baseurl}/images/sublima-logo.png"/>
+=======
+				<img alt="header logo" class="headerImg" src="{$baseurl}/images/detektorportal-logo.png"/>
+>>>>>>> fa1fcf0... Endret bildeadresse i header
 				</a>
 			</div>
 			<div id="topMenu">
