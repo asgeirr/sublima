@@ -18,7 +18,7 @@
     <head>
       <title>
 	<xsl:value-of select="$title"/>
-	<xsl:text> | Detektor emneportal</xsl:text>
+	<xsl:text> | Bazar</xsl:text>
       </title>
    
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -84,6 +84,7 @@
 			<div id="headerLogo">
 				<a  href="{$baseurl}/{$qloc}">
 				<img alt="header logo" class="headerImg" src="{$baseurl}/images/sublima-logo.png"/>
+				<span id="headerText">Emneportalverktøy</span>
 				</a>
 			</div>
 			<div id="topMenu">
@@ -95,9 +96,9 @@
 			</div>
 			
 			<div class="langBar">
-				<!--xsl:call-template name="set-langs">
+				<xsl:call-template name="set-langs">
 					<xsl:with-param name="baseurl" select="$baseurl"/>
-				</xsl:call-template-->
+				</xsl:call-template>
 				<div id="textSize">
 					<a id="textSizeLarge" style="cursor:pointer;" onclick="ChangeTextSize('16px', this);">W</a>
 					<a id="textSizeMedium" style="cursor:pointer;" onclick="ChangeTextSize('14px', this);">W</a>
