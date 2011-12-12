@@ -100,9 +100,9 @@
 					<xsl:with-param name="baseurl" select="$baseurl"/>
 				</xsl:call-template>
 				<div id="textSize">
-					<a id="textSizeLarge" style="cursor:pointer;" onclick="ChangeTextSize('16px', this);">W</a>
-					<a id="textSizeMedium" style="cursor:pointer;" onclick="ChangeTextSize('14px', this);">W</a>
-					<a id="textSizeSmall" style="cursor:pointer;" onclick="ChangeTextSize('12px', this);">W</a>
+					<a id="textSizeLarge" style="cursor:pointer;" onclick="ChangeTextSize('16px', this);">A</a>
+					<a id="textSizeMedium" style="cursor:pointer;" onclick="ChangeTextSize('14px', this);">A</a>
+					<a id="textSizeSmall" style="cursor:pointer;" onclick="ChangeTextSize('12px', this);">A</a>
 				</div>
 			</div>
 			
