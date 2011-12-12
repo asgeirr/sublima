@@ -96,9 +96,9 @@
 			</div>
 			
 			<div class="langBar">
-				<xsl:call-template name="set-langs">
+				<!--<xsl:call-template name="set-langs">
 					<xsl:with-param name="baseurl" select="$baseurl"/>
-				</xsl:call-template>
+				</xsl:call-template>-->
 				<div id="textSize">
 					<a id="textSizeLarge" style="cursor:pointer;" onclick="ChangeTextSize('16px', this);">A</a>
 					<a id="textSizeMedium" style="cursor:pointer;" onclick="ChangeTextSize('14px', this);">A</a>
