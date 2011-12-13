@@ -684,28 +684,16 @@ PVJ: Made the file UTF-8
 							<xsl:text> </xsl:text>
 							<!-- avoid empty div -->
 
-                            <!-- Videresøk for SMIL -->
-                        <!--div class="panel-tasks">
+                            <!-- Videresøk -->
+                        <div id="panel-tasks">
                             <h2><i18n:text key="videresok">Videresøk</i18n:text></h2>
-
-                            <xsl:choose>
-                                <xsl:when test="$interface-language = 'no'">
-                                    <a href="http://no.wikipedia.org/wiki/{/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang=$interface-language]}" title="Wikipedia">Wikipedia</a><br/>
-                                    <a href="http://www.snl.no/.search?query={/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang=$interface-language]}" title="Store norske leksikon">Store norske leksikon</a><br/>
-                                    <a href="http://www.pasienthandboka.no/default.asp?mode=search&amp;searchstring={/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang=$interface-language]}" title="Pasienthåndboka">Pasienthåndboka</a><br/>
-                                    <a href="http://www.ub.uio.no/umh/bibsys_sok/?run={/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang=$interface-language]}" title="Bøker og artikler">Bøker og artikler</a>
-                               </xsl:when>
-
-                               <xsl:when test="$interface-language = 'sv'">
-                                    <a href="http://sv.wikipedia.org/wiki/{/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang=$interface-language]}" title="Wikipedia">Wikipedia</a>
-                               </xsl:when>
-
-                                <xsl:when test="$interface-language = 'da'">
-                                    <a href="http://da.wikipedia.org/wiki/{/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang=$interface-language]}" title="Wikipedia">Wikipedia</a><br/>
-                                    <a href="https://www.sundhed.dk/Soeg.aspx?SoegeOrd={/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang=$interface-language]}" title="Sundhed.dk">Sundhed.dk</a>
-                               </xsl:when>
-                            </xsl:choose>
-                        </div-->
+							<br/>
+							<a href="http://www.snl.no/.search?query={/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang='no']}" title="Store norske leksikon">Store norske leksikon</a><br/>
+							<a href="http://no.wikipedia.org/w/index.php?title=Spesial%3ASearch&amp;search={/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang='no']}" title="Wikipedia_nb">Wikipedia (bokmål)</a><br/>
+                            <a href="http://nn.wikipedia.org/w/index.php?title=Spesial%3ASearch&amp;search={/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang='no']}" title="Wikipedia_nn">Wikipedia (nynorsk)</a><br/>
+                            <a href="http://biblioteksvar.no/arkiv/search.php?q={/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang='no']}" title="Biblioteksvar">Biblioteksvar-arkivet</a><br/>
+                            <a href="http://torfeus.deich.folkebibl.no/~asgeirr/Detektor/emnespeider.php?query={/c:page/c:navigation/rdf:RDF/skos:Concept/skos:prefLabel[@xml:lang='no']}" title="Andre_kilder">Andre kilder</a><br/>                                
+                        </div>
 
 
 					</xsl:if>
