@@ -35,7 +35,7 @@
   </xsl:template>
 
   <xsl:template match="dct:title" mode="external-link">
-    <a href="{../@rdf:about}"><xsl:value-of select="."/></a>
+    <a href="{../@rdf:about}" target='blank'><xsl:value-of select="."/></a>
   </xsl:template>
   
   <xsl:template match="dct:title" mode="description-link">
