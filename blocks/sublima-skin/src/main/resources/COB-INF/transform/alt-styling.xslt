@@ -509,45 +509,7 @@ PVJ: Made the file UTF-8
 						<xsl:if test="c:page/c:mode = 'topic' or c:page/c:mode = 'search-result'">
 
 							<xsl:if test="$numberofhits &lt; 1 and not(c:page/c:navigation/rdf:RDF//skos:Concept)">
-								<br/>
-								<!-- Generer et bibsys-søk -->
-								<a>
-									<xsl:attribute name="href">
-										<xsl:text>http://ask.bibsys.no/ask/action/result?cmd=&amp;kilde=biblio&amp;q=</xsl:text>
-										<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
-									</xsl:attribute>
-									<i18n:text key="search.for">Søk etter</i18n:text>
-									<xsl:text> '</xsl:text>
-									<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
-									<xsl:text>' i Bibsys</xsl:text>
-								</a>
-								<br/>
-								<!-- Generer et google scholar søk -->
-								<a>
-									<xsl:attribute name="href">
-										<xsl:text>http://scholar.google.com/scholar?hl=en&amp;btnG=Search&amp;as_sdt=1%2C5&amp;as_sdtp=on&amp;q=</xsl:text>
-										<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
-									</xsl:attribute>
-									<i18n:text key="search.for">Søk etter</i18n:text>
-									<xsl:text> '</xsl:text>
-									<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
-									<xsl:text>' i Google Scholar</xsl:text>
-								</a>
-								<br/>
-								<!-- Generer et google søk -->
-								<a>
-									<xsl:attribute name="href">
-										<xsl:text>http://no.wikipedia.org/w/index.php?title=Spesial%3ASearch&amp;search=</xsl:text>
-										<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
-										<xsl:text>&amp;fulltext=Søk</xsl:text>
-									</xsl:attribute>
-									<i18n:text key="search.for">Søk etter</i18n:text>
-									<xsl:text> '</xsl:text>
-									<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
-									<xsl:text>' </xsl:text>
-									<i18n:text key="in.wikipedia">i Wikipedia</i18n:text>
-								</a>
-								<br/>
+								<p/><p/>
 								<!-- Generer et SNL-søk -->
 								<a>
 									<xsl:attribute name="href">
@@ -560,7 +522,48 @@ PVJ: Made the file UTF-8
 									<xsl:text>' </xsl:text>
 									<i18n:text key="in.snl">i Store norske leksikon</i18n:text>
 								</a>
-								<br/>
+								<p/>
+								<!-- Generer et Wikipedia(nb)-søk -->
+								<a>
+									<xsl:attribute name="href">
+										<xsl:text>http://no.wikipedia.org/w/index.php?title=Spesial%3ASearch&amp;search=</xsl:text>
+										<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
+										<xsl:text>&amp;fulltext=Søk</xsl:text>
+									</xsl:attribute>
+									<i18n:text key="search.for">Søk etter</i18n:text>
+									<xsl:text> '</xsl:text>
+									<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
+									<xsl:text>' </xsl:text>
+									<i18n:text key="in.wikipedia.nb">i Wikipedia (bokmål)</i18n:text>
+								</a>
+								<p/>
+								<!-- Generer et Wikipedia(nn)-søk -->
+								<a>
+									<xsl:attribute name="href">
+										<xsl:text>http://nn.wikipedia.org/w/index.php?title=Spesial%3ASearch&amp;search=</xsl:text>
+										<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
+										<xsl:text>&amp;fulltext=Søk</xsl:text>
+									</xsl:attribute>
+									<i18n:text key="search.for">Søk etter</i18n:text>
+									<xsl:text> '</xsl:text>
+									<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
+									<xsl:text>' </xsl:text>
+									<i18n:text key="in.wikipedia.nn">i Wikipedia (nynorsk)</i18n:text>
+								</a>
+								<p/>
+								<!-- Generer et Biblioteksvar-søk -->
+								<a>
+									<xsl:attribute name="href">
+										<xsl:text>http://biblioteksvar.no/arkiv/search.php?q=</xsl:text>
+										<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
+									</xsl:attribute>
+									<i18n:text key="search.for">Søk etter</i18n:text>
+									<xsl:text> '</xsl:text>
+									<xsl:value-of select="c:page/c:facets/c:request/c:param[@key='searchstring']/c:value"/>
+									<xsl:text>' </xsl:text>
+									<i18n:text key="in.biblioteksvar">i arkivet til Biblioteksvar</i18n:text>
+								</a>
+								<p/>
 							</xsl:if>
 						</xsl:if>
 						<xsl:text> </xsl:text>
