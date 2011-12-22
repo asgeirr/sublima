@@ -396,6 +396,10 @@ fieldset {
     text-align:center;
     height:100%;
 }
+#underFooter {
+	background-color:#FFFFFF; /* background color under-footer*/
+	text-align: center;
+}
 
 
 
