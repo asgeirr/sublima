@@ -47,7 +47,7 @@
       <table>
         <tr>
           <td>
-            <label for="sioc:email"><i18n:text key="email">E-post</i18n:text>(<i18n:text key="username">brukernavn</i18n:text>)</label>
+            <label for="sioc:email"><i18n:text key="username">Brukernavn</i18n:text></label>
           </td>
           <td>
             <input id="sioc:email" type="text"

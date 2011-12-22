@@ -267,7 +267,7 @@
   <message key="user.save.error">Feil ved lagring av bruker</message>
   <message key="user.update.failed">Feil ved oppdatering av bruker</message>
   <message key="user.updated">Bruker oppdatert</message>
-  <message key="user.username.blank">E-post (brukernavn) må være utfylt</message>
+  <message key="user.username.blank">Brukernavn må være utfylt</message>
   <message key="username">Brukernavn</message>
   <message key="users">Brukere</message>
   <message key="validation.comment.isspam">E-postadressen er registrert som kilde for spam</message>
