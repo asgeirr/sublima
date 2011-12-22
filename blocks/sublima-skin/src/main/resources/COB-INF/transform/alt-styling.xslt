@@ -782,6 +782,10 @@ PVJ: Made the file UTF-8
 		<div class="clearer">&#160;</div>
 	</div> <!-- three column layout end -->
 	<div class="clearer">&#160;</div>
+	
+	<div id="overFooter">
+		<a href="http://digital.deichman.no/sublima/"><img class="footerImg" src="{$baseurl}/images/sublima-logo_liten.png"/></a>
+	</div>
 
 	<div id="footer">
 		<div id="leftFooter">
