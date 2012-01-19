@@ -25,6 +25,18 @@ function hideFacetsOnLoad() {
       }
   }
 
+  var coverageFacet = getElementsByClassName("coverageFacet");
+  if (coverageFacet != null) {
+      if (coverageFacet.length > maxFacets) {
+          hidefacets("coverageFacet");
+      } else {
+          var el = document.getElementById("coverageFacetHideShow");
+          if (el != null) {
+              el.style.display = 'none';
+          }
+      }
+  }
+
   var audienceFacet = getElementsByClassName("audienceFacet");
   if (audienceFacet != null) {
       if (audienceFacet.length > maxFacets) {
