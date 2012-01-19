@@ -126,7 +126,7 @@ PVJ: Made the file UTF-8
 
   <xsl:template match="/">
 
-    <html>
+    <html dir="rtl">
       <xsl:call-template name="head">
 	<xsl:with-param name="title">
 	  <xsl:choose>
