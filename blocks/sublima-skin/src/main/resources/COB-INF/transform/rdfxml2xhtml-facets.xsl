@@ -111,8 +111,8 @@
                         <h3>
                             <i18n:text key="country">Land</i18n:text>
                         </h3>
-                        <img id="openCloseLanguage" alt="open/close publisher" src="{$baseurl}/images/closefacet.png"
-                             onclick="OpenCloseFact('languageFacets', this);"/>
+                        <img id="openCloseCoverage" alt="open/close publisher" src="{$baseurl}/images/closefacet.png"
+                             onclick="OpenCloseFact('coverageFacets', this);"/>
                         <div class="clearer">&#160;</div>
                     </div>
                     <div id="coverageFacets">
