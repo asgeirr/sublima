@@ -106,7 +106,7 @@
             </xsl:if>
 
 
-            <xsl:if test="sub:Resource/dct:audience">
+            <!--xsl:if test="sub:Resource/dct:audience">
                 <div class="facet">
                     <div class="facetHeading">
                         <h3>
@@ -134,7 +134,7 @@
                         </div>
                     </div>
                 </div>
-            </xsl:if>
+            </xsl:if-->
 
             <xsl:if test="sub:Resource/dct:type">
                 <div class="facet">
