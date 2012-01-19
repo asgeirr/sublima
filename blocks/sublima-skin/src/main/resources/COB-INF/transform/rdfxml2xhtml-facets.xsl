@@ -472,6 +472,8 @@
                 </xsl:choose>
 
                 (<xsl:value-of select="$count"/>)
+				
+				<xsl:text>&rlm;</xsl:text>
 
                 <xsl:if test="/c:page/c:facets/c:request/c:param[@key = $this-field]/c:value = $uri">
                     <a>
