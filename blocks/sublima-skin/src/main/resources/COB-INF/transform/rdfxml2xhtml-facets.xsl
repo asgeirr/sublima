@@ -111,8 +111,8 @@
                         <h3>
                             <i18n:text key="country">Land</i18n:text>
                         </h3>
-                        <img id="openCloseCoverage" alt="open/close publisher" src="{$baseurl}/images/closefacet.png"
-                             onclick="OpenCloseFact('coverageFacets', this);"/>
+                        <img id="openCloseLanguage" alt="open/close publisher" src="{$baseurl}/images/closefacet.png"
+                             onclick="OpenCloseFact('languageFacets', this);"/>
                         <div class="clearer">&#160;</div>
                     </div>
                     <div id="coverageFacets">
@@ -472,8 +472,6 @@
                 </xsl:choose>
 
                 (<xsl:value-of select="$count"/>)
-				
-				<xsl:text>&rlm;</xsl:text>
 
                 <xsl:if test="/c:page/c:facets/c:request/c:param[@key = $this-field]/c:value = $uri">
                     <a>
