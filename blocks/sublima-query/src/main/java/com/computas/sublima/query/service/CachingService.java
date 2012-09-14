@@ -17,56 +17,45 @@ import java.util.concurrent.TimeUnit;
 public class CachingService {
 
     private static Logger logger = Logger.getLogger(CachingService.class);
-    private boolean useMemcached = false;
+    private MemcachedClient memcached;
 
     public CachingService() {
         // This should really have inherited and extended MencachedClient, but that can't be done in Java.
+    	memcached = connect();
     }
 
     /**
      * Connect to the memcached
      * @return an instance of the MemcachedClient
      **/
-    public MemcachedClient connect() {
-        MemcachedClient memcached = null;
+    private MemcachedClient connect() {
+        MemcachedClient mc = null;
         try {
-            memcached = new MemcachedClient(
+            mc = new MemcachedClient(
                     AddrUtil.getAddresses(
                             SettingsService.getProperty("sublima.memcached.servers")
                     )
             );
-            useMemcached = true;
         } catch (Exception e) {
-            useMemcached = false;
             logger.info("SPARQLdispatcher couldn't find the memcached server and said " + e.getMessage()
                     + ". Have you set sublima.memcached.servers?");
         }
-        return memcached;
-    }
-
-    /**
-     * If we are using memcached
-     * @return boolean
-     */
-    public boolean useMemcached() {
-        return useMemcached;
+        return mc;
     }
 
     /**
      * Get whatever from the memcached with a given key
-     *
-     * @param mc the Memcached Client
      * @param key the String key of the cache entry
+     *
      * @return an Object with the cached entry or null if it wasn't found.
      */
-    public Object get(MemcachedClient mc, String key) {
+    public Object get(String key) {
         long connecttime = System.currentTimeMillis();
         Object fromCache = null;
-        if (useMemcached) {
+        if (memcached != null) {
             try {
-                fromCache = mc.get(key);
+                fromCache = memcached.get(key);
             } catch (Exception e) {
-                useMemcached = false;
                 logger.warn("SPARQLdispatcher timed out when contacting memcached: "  + e.getMessage()
                         + ". Have you set sublima.memcached.servers?");
             }
@@ -78,30 +67,34 @@ public class CachingService {
 
     /**
      * Ask if something with the given key is allready memcached
-     *
-     * @param mc the Memcached Client
      * @param key the String key of the cache entry
+     *
      * @return boolean returns true if the key was found.
      */
-    public boolean ask(MemcachedClient mc, String key) {
-      return (this.get(mc, key) != null);
+    public boolean ask(String key) {
+      return (this.get(key) != null);
     }
 
     /**
      * Will invalidate the cache when called
-     * @param mc The MemcachedClient object
      */
-
-    public void modelChanged(MemcachedClient mc) {
-        if (useMemcached) {
-          mc.waitForQueues(2, TimeUnit.SECONDS);
-          mc.flush();
+    public void modelChanged() {
+        if (memcached != null) {
+          memcached.waitForQueues(2, TimeUnit.SECONDS);
+          memcached.flush();
         }
     }
 
-    public void close(MemcachedClient mc) {
-        if (useMemcached) {
-            mc.shutdown(2, TimeUnit.SECONDS);
+    public void close() {
+        if (memcached != null) {
+            memcached.shutdown(2, TimeUnit.SECONDS);
+            memcached = null;
         }
     }
+
+	public void set(String cacheKey, int i, String result) {
+		if (memcached != null) {
+			memcached.set(cacheKey, 60 * 60 * 24 * 30, result);
+		}
+	}
 }

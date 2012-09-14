@@ -68,7 +68,6 @@ public class SearchController implements StatelessAppleController {
             StringBuilder params = adminService.getMostOfTheRequestXML(req);
             params.append("\n  </request>\n");
             bizData.put("facets", params.toString());
-            System.gc();
             res.sendPage("xml/advancedsearch", bizData);
             return;
         }
@@ -110,7 +109,6 @@ public class SearchController implements StatelessAppleController {
         bizData.put("messages","<empty/>");
         bizData.put("abovemaxnumberofhits", "false");
         bizData.put("comment", "<empty/>");
-        System.gc();
         res.sendPage(format + "/sparql-result", bizData);
     }
 
@@ -161,8 +159,6 @@ public class SearchController implements StatelessAppleController {
         bizData.put("messages", "<empty/>");
         bizData.put("abovemaxnumberofhits", "false");
         bizData.put("comment", "<empty/>");
-
-        System.gc();
         res.sendPage(format + "/sparql-result", bizData);
     }
 
@@ -334,12 +330,11 @@ public class SearchController implements StatelessAppleController {
             if (adminService.isAboveMaxNumberOfHits(countNumberOfHitsQuery)) {
                 // We are above the threshold, lets see if we have it cached
                 CachingService cache = new CachingService();
-                MemcachedClient memcached = cache.connect();
-
+                
                 String cacheString = sparqlQuery.replaceAll("\\s+", " ") + SettingsService.getProperty("sublima.base.url");
                 String cacheKey = String.valueOf(cacheString.hashCode()); // We could parse the query first to get a better key
                 //  logger.trace("SPARQLdispatcher hashing for use as key.\n" + cacheString + "\n");
-                if (cache.ask(memcached, cacheKey)) {
+                if (cache.ask(cacheKey)) {
                     logger.debug("SearchController found the query in the cache.");
                     queryResult = sparqlDispatcher.query(sparqlQuery); // Cache will be used in here.
                     abovemaxnumberofhits = false;
@@ -354,6 +349,7 @@ public class SearchController implements StatelessAppleController {
                     queryResult = "<empty/>";
                     abovemaxnumberofhits = true;
                 }
+                cache.close();
             } else {
                 // We are below the threshold, do the search. Cache will be checked
                 queryResult = sparqlDispatcher.query(sparqlQuery);
@@ -403,7 +399,6 @@ public class SearchController implements StatelessAppleController {
         bizData.put("messages", messageBuffer.toString());
         bizData.put("abovemaxnumberofhits", abovemaxnumberofhits);
         bizData.put("comment", "<empty/>");
-        System.gc();
         res.sendPage(format + "/sparql-result", bizData);
     }
 
